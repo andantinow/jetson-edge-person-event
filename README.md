@@ -7,6 +7,17 @@ Jetson Orin Nano에서 TensorRT를 사용해 단일 사람(person)을 실시간�
 지연 시간 계측, 그리고 실제 운영 가능한 구조에 초점을 둔다.
 
 
+Pipelines
+
+
+
+- SSD MobileNet v1 (TensorRT FP16): docs/README_ssd.md  
+
+- YOLOv8n (TensorRT FP16): docs/README_yolo.md
+
+
+
+
 Overview
 
 이 프로젝트는 고정 카메라 환경에서 다음을 수행한다.
