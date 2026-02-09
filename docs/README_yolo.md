@@ -39,8 +39,6 @@ Jetson Orin Nano에서 TensorRT FP16 엔진 기반 YOLOv8을 사용해
 → vis.jpg 저장
 → HTTP 서버 제공
 
-yaml
-코드 복사
 
 ---
 
@@ -95,9 +93,6 @@ TensorRT 엔진 파일(`*.engine`)은 저장소에 포함하지 않는다.
 
 /workspace/logs/events_YYYYMMDD_HHMMSS.jsonl
 
-yaml
-코드 복사
-
 ---
 
 ## Visualization
@@ -110,8 +105,6 @@ yaml
 
 http://<JETSON_IP>:8000/vis.jpg
 
-yaml
-코드 복사
 
 ---
 
@@ -145,8 +138,6 @@ python3 /workspace/outputs/live_yolo_person_trt.py \
   --track \
   --event_log \
   --stay_sec 2.0 --lost_sec 0.7
-yaml
-코드 복사
 
 ---
 
