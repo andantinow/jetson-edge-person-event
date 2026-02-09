@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+
+# env
+venv/
+.env
+
+# tensorrt / models (DO NOT COMMIT)
+*.engine
+*.plan
+*.onnx
+
+# runtime outputs/logs (DO NOT COMMIT)
+outputs/live/*
+outputs/live/events/*
+outputs/sanity/*
+logs/*
+*.log
+*.jpg
+*.png
+
+# editor
+.vscode/
+.DS_Store
