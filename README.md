@@ -7,18 +7,12 @@ Jetson Orin Nano에서 TensorRT를 사용해 단일 사람(person)을 실시간�
 지연 시간 계측, 그리고 실제 운영 가능한 구조에 초점을 둔다.
 
 
-Pipelines
+## Pipelines
 
-
-
-- SSD MobileNet v1 (TensorRT FP16): docs/README_ssd.md  
-
+- SSD MobileNet v1 (TensorRT FP16): docs/README_ssd.md
 - YOLOv8n (TensorRT FP16): docs/README_yolo.md
 
-
-
-
-Overview
+## Overview
 
 이 프로젝트는 고정 카메라 환경에서 다음을 수행한다.
 
@@ -30,7 +24,7 @@ Overview
 - 파이프라인 전 구간 지연 시간 측정
 
 
-System Architecture
+## System Architecture
 
 입력부터 출력까지의 처리 흐름은 다음과 같다.
 
@@ -48,7 +42,7 @@ System Architecture
 → HTTP 서버 제공
 
 
-Model and Inference
+## Model and Inference
 
 - Model: YOLOv8n (COCO pretrained)
 - Runtime: TensorRT
@@ -59,7 +53,7 @@ Model and Inference
 TensorRT 엔진 파일 (*.engine)은 저장소에 포함하지 않는다.
 
 
-State Machine
+## State Machine
 
 단일 person 기준 상태 머신을 사용한다.
 
@@ -79,7 +73,7 @@ Events:
 이벤트는 상태 변화 시점에만 발생하며 JSONL 파일로 기록된다.
 
 
-Event Logging
+## Event Logging
 
 이벤트 로그는 JSONL 형식으로 append 기록된다.
 
@@ -98,7 +92,7 @@ Event Logging
 /workspace/logs/events_YYYYMMDD_HHMMSS.jsonl
 
 
-Visualization
+## Visualization
 
 - 실시간 결과는 vis.jpg 파일로 저장된다.
 - atomic write 방식으로 항상 최신 프레임을 유지한다.
@@ -108,7 +102,7 @@ Visualization
 http://<JETSON_IP>:8000/vis.jpg
 
 
-Performance Measurement
+## Performance Measurement
 
 다음 구간에 대해 지연 시간을 측정한다.
 
@@ -124,7 +118,7 @@ Performance Measurement
 rolling window 기준 p50 / p90 / p99 / max 값을 주기적으로 출력한다.
 
 
-Usage (inside container)
+## Usage (inside container)
 
 YOLO TensorRT 실행:
 
